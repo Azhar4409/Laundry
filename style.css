@@ -1,0 +1,149 @@
+:root {
+    --primary-color: rgb(97, 120, 253);
+    --secondary-color: orange;
+    --hover-color: aqua;
+    --background-color: black;
+    --text-color: aliceblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 5px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    margin: 10px;
+    gap: 20px;
+}
+
+.logo img {
+    border-radius: 50%;
+}
+
+.logo h1 {
+    color: var(--secondary-color);
+}
+
+.nav-items {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 20px;
+    margin: 10px;
+    font-size: 24px;
+}
+
+.nav-items:hover {
+    color: var(--hover-color);
+}
+
+.section {
+    background-image: url(Laundry\ 2.jpg);
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 25% 0; /* Vertical padding for top and bottom */
+    filter: brightness(0.5); /* Darkens the background for text visibility */
+    position: relative; /* Allows absolute positioning of child elements */
+    width: 100%; /* Ensure the section takes full width */
+    height: 100vh; /* Set height to full viewport height */
+}
+
+.text {
+    color: var(--text-color);
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+}
+
+.text a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.text a:hover {
+    color: var(--hover-color);
+}
+
+.footer {
+    position: relative;
+    background-color: var(--background-color);
+    color: white;
+    padding: 10px;
+}
+
+.footer p {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-items {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .text a {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .section {
+        padding: 15%; /* Reduce padding for smaller screens */
+        height: 60vh; /* Adjust height for better visibility on mobile */
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-items {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 15%;
+    }
+
+    .text {
+        font-size: 18px;
+        top: 60%; /* Adjust position for smaller screens */
+    }
+
+    .text a {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 5px; /* Reduce padding for footer */
+    }
+
+    .footer p {
+        font-size: 12px; /* Smaller font size for footer text */
+    }
+}

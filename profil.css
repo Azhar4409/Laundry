@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: rgb(97, 120, 253);
+    padding: 5px;
+    position: relative;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    margin: 10px;
+    gap: 20px;
+}
+
+.logo img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.logo h1 {
+    color: orange;
+}
+
+.nav-items {
+    text-decoration: none;
+    color: orange;
+    padding: 20px;
+    margin: 10px;
+    font-size: 24px;
+}
+
+.nav-items:hover {
+    color: aqua;
+}
+
+.about-us {
+    background-color: rgb(97, 120, 253);
+    color: aliceblue;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.footer p {
+    text-align: center;
+}
+
+/* Media Queries for Phones */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .nav-items {
+        font-size: 16px; /* Smaller font size for nav items */
+        padding: 10px; /* Reduce padding for nav items */
+    }
+
+    .about-us {
+        font-size: 16px; /* Smaller font size for about us section */
+        padding: 10px; /* Reduce padding for better spacing */
+        text-align: left; /* Align text to the left for better readability */
+    }
+
+    .profile-container {
+        text-align: center; /* Center align profile container */
+        padding: 10px; /* Add padding */
+    }
+
+    .laundry-picture {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .footer {
+        padding: 5px; /* Reduce padding for footer */
+    }
+
+    .footer p {
+        font-size: 12px; /* Smaller font size for footer text */
+    }
+
+    .section {
+        padding: 15%; /* Reduce padding for smaller screens */
+        height: auto; /* Adjust height for better visibility on mobile */
+    }
+
+    .text {
+        font-size: 16px; /* Smaller font size for text */
+        top: 60%; /* Adjust position for smaller screens */
+    }
+}

@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  body {
+    background-image: url('Laundry 2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative; /* Tambahkan ini */
+ }
+
+ body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan transparansi 50% */
+    z-index: 0; /* Pastikan ini berada di bawah konten */
+}
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: rgb(97, 120, 253);
+  padding: 5px;
+  position: relative;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  margin: 10px;
+  gap: 20px;
+}
+
+.logo img{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.logo h1 {
+  color: orange;
+}
+
+.nav-items {
+  text-decoration: none;
+  color: orange;
+  padding: 20px;
+  margin: 10px;
+  font-size: 24px;
+}
+
+.nav-items:hover {
+  color: aqua;
+}
+
+.awrapper {
+    position: relative; /* Pastikan form berada di atas overlay */
+    z-index: 1; /* Pastikan form berada di atas overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px); /* Efek blur */
+    -webkit-backdrop-filter: blur(8px); /* Efek blur untuk browser WebKit */
+    margin: auto; /* Memusatkan secara horizontal */
+    position: absolute; /* Menggunakan posisi absolute untuk memusatkan secara vertikal */
+    top: 53%; /* Mengatur posisi dari atas */
+    left: 50%; /* Mengatur posisi dari kiri */
+    transform: translate(-50%, -50%); /* Memindahkan ke tengah */
+}
+  
+  form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+  }
+  
+  .input-field input,
+  .input-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+  }
+  
+  .input-field input:focus~label,
+  .input-field input:valid~label,
+  .input-field textarea:focus~label,
+  .input-field textarea:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+  }
+  
+  button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  footer {
+    position: absolute; /* Mengatur posisi footer */
+    bottom: 0; /* Menempatkan footer di bagian bawah */
+    left: 0; /* Menempatkan footer di kiri */
+    width: 100%; /* Memastikan footer mengambil lebar penuh */
+    text-align: center; /* Memusatkan teks di footer */
+    padding: 10
+  }
+
+  /* Existing media query for screens up to 600px */
+@media (max-width: 600px) {
+    .awrapper {
+        padding: 20px; /* Reduce padding for smaller screens */
+        top: 65%;
+        margin-bottom: 50%;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .nav-items {
+        font-size: 18px; /* Reduce font size for nav items */
+        padding: 10px; /* Adjust padding for nav items */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .input-field input,
+    .input-field textarea {
+        font-size: 14px; /* Reduce font size for inputs */
+    }
+
+    button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
+
+/* Additional media query for very small devices (e.g., phones in portrait mode) */
+@media (max-width: 400px) {
+
+    .awrapper {
+        width: 95%; /* Make the form take up even more width */
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .nav-items {
+        font-size: 16px; /* Further reduce font size for nav items */
+        padding: 8px; /* Adjust padding for nav items */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Further reduce heading size */
+    }
+
+    .input-field input,
+    .input-field textarea {
+        font-size: 12px; /* Further reduce font size for inputs */
+    }
+
+    button {
+        font-size: 12px; /* Further reduce button font size */
+        padding: 8px 12px; /* Adjust button padding */
+    }
+}
